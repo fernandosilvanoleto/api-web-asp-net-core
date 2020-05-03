@@ -1,0 +1,14 @@
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\bin\Debug\netcoreapp2.1\api-web-asp-net-core.deps.json
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\bin\Debug\netcoreapp2.1\api-web-asp-net-core.runtimeconfig.json
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\bin\Debug\netcoreapp2.1\api-web-asp-net-core.runtimeconfig.dev.json
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\bin\Debug\netcoreapp2.1\api-web-asp-net-core.dll
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\bin\Debug\netcoreapp2.1\api-web-asp-net-core.pdb
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.csprojAssemblyReference.cache
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.csproj.CoreCompileInputs.cache
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.RazorAssemblyInfo.cache
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.RazorAssemblyInfo.cs
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.AssemblyInfoInputs.cache
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.AssemblyInfo.cs
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.RazorTargetAssemblyInfo.cache
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.dll
+G:\Programação_Udemy\C#\api-web-asp-net-core\api-web-asp-net-core\obj\Debug\netcoreapp2.1\api-web-asp-net-core.pdb
