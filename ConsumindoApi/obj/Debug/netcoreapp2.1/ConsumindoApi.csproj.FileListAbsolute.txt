@@ -1,0 +1,11 @@
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\bin\Debug\netcoreapp2.1\ConsumindoApi.deps.json
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\bin\Debug\netcoreapp2.1\ConsumindoApi.runtimeconfig.json
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\bin\Debug\netcoreapp2.1\ConsumindoApi.runtimeconfig.dev.json
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\bin\Debug\netcoreapp2.1\ConsumindoApi.dll
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\bin\Debug\netcoreapp2.1\ConsumindoApi.pdb
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\obj\Debug\netcoreapp2.1\ConsumindoApi.csprojAssemblyReference.cache
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\obj\Debug\netcoreapp2.1\ConsumindoApi.csproj.CoreCompileInputs.cache
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\obj\Debug\netcoreapp2.1\ConsumindoApi.AssemblyInfoInputs.cache
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\obj\Debug\netcoreapp2.1\ConsumindoApi.AssemblyInfo.cs
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\obj\Debug\netcoreapp2.1\ConsumindoApi.dll
+G:\Programação_Udemy\C#\api-web-asp-net-core\ConsumindoApi\obj\Debug\netcoreapp2.1\ConsumindoApi.pdb
