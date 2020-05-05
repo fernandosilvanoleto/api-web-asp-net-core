@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using api_web_asp_net_core.Util;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api_web_asp_net_core.Controllers
@@ -14,6 +16,11 @@ namespace api_web_asp_net_core.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            DAL objDAL = new DAL();
+            //string sql = "insert into cliente(nome, data_cadastro, cpf_cnpj, data_nascimento, tipo, telefone, email, cep, logradouro, numero, bairro, complemento, cidade, uf)" +
+                        // "values('Fernando Silva Noleto', '2019/01/25', '05564652156', '1995/06/09', 'M', '949656232', 'fernandonoleto17@gmail.com', '77650000', 'Rua', '987', 'flamboyant', 'perto daqui', 'Miracema', 'TO');";
+            //objDAL.ExecutarComandoSql(sql);
+
             return new string[] { "value1", "value2" };
         }
 
@@ -22,7 +29,10 @@ namespace api_web_asp_net_core.Controllers
         [Route("buscarcliente/{id}")]
         public ActionResult<string> BuscarCliente(int id)
         {
-            return id.ToString();
+            DAL objDAL = new DAL();
+            string sql = $"SELECT * FROM cliente where id = {id}";
+            DataTable dados = objDAL.RetornarDataTable(sql);
+            return dados.Rows[0]["Nome"].ToString();
         }
 
         // POST api/values
