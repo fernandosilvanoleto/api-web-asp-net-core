@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using api_web_asp_net_core.Model;
 using api_web_asp_net_core.Util;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,16 +13,18 @@ namespace api_web_asp_net_core.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
+        // GET api/webservice
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public List<ClienteModel> Get()
         {
-            DAL objDAL = new DAL();
-            //string sql = "insert into cliente(nome, data_cadastro, cpf_cnpj, data_nascimento, tipo, telefone, email, cep, logradouro, numero, bairro, complemento, cidade, uf)" +
-                        // "values('Fernando Silva Noleto', '2019/01/25', '05564652156', '1995/06/09', 'M', '949656232', 'fernandonoleto17@gmail.com', '77650000', 'Rua', '987', 'flamboyant', 'perto daqui', 'Miracema', 'TO');";
-            //objDAL.ExecutarComandoSql(sql);
+            return new ClienteModel().Listagem();
+        }
 
-            return new string[] { "value1", "value2" };
+        [HttpGet]
+        [Route("cliente/{id}")]
+        public ClienteModel Cliente(int id)
+        {
+            return new ClienteModel().RetornarCliente(id);
         }
 
         // GET api/webservice/buscarcliente/5
@@ -38,9 +41,22 @@ namespace api_web_asp_net_core.Controllers
         // POST api/values
         [HttpPost]
         [Route("cadastrarcliente")]
-        public string CadastrarCliente([FromBody] string value)
+        public ReturnServices CadastrarCliente([FromBody]ClienteModel dados)
         {
-            return "oi, fernando";
+            ReturnServices retorno = new ReturnServices();
+
+            try
+            {
+                dados.RegistrarCliente();
+                retorno.Result = true;
+                retorno.ErrorMessage = string.Empty;
+            }
+            catch (Exception e)
+            {
+                retorno.Result = true;
+                retorno.ErrorMessage = "Error ao tentar registrar cliente" + e.Message;
+            }
+            return retorno;
         }
 
         // PUT api/values/5
