@@ -5,14 +5,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using api_web_asp_net_core.Model;
 using api_web_asp_net_core.Util;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api_web_asp_net_core.Controllers
 {
     [Route("api/webservice")]
     [ApiController]
-    public class ValuesController : ControllerBase
-    {
+    public class ClienteController : ControllerBase
+    {        
+        Autenticacao AutenticaoService;
+        public ClienteController(IHttpContextAccessor _contextAccessor)
+        {
+            AutenticaoService = new Autenticacao(_contextAccessor);
+        }
         // GET api/webservice
         [HttpGet]
         public List<ClienteModel> Get()
@@ -84,9 +90,23 @@ namespace api_web_asp_net_core.Controllers
         // DELETE api/values/5
         [HttpDelete("{id}")]
         [Route("excluircliente/{id}")]
-        public void ExcluirCliente(int id)
+        public ReturnServices ExcluirCliente(int id)
         {
-            new ClienteModel().ExcluirCliente(id);
+            ReturnServices retorno = new ReturnServices();
+            try
+            {
+                retorno.Result = true;
+                retorno.ErrorMessage = "Cliente excluído com sucesso!!!";
+                AutenticaoService.Autenticar();
+                new ClienteModel().ExcluirCliente(id);
+
+            }
+            catch (Exception e)
+            {
+                retorno.Result = false;
+                retorno.ErrorMessage = e.Message;
+            }
+            return retorno;
         }
     }
 }
