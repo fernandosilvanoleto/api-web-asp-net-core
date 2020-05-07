@@ -15,7 +15,7 @@ namespace api_web_asp_net_core.Util
         private static string Password = "12345678";
         private MySqlConnection Connection;
 
-        private string ConnectionString = $"Server={Server};Database={Database};Uid={User};Pwd={Password};Sslmode=none;";
+        private string ConnectionString = $"Server={Server};Database={Database};Uid={User};Pwd={Password};Sslmode=none;charset=utf8;";
 
         public DAL()
         {

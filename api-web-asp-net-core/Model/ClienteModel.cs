@@ -119,5 +119,35 @@ namespace api_web_asp_net_core.Model
             };                
             return item;
         }
+
+        public void EditarCliente()
+        {
+            DAL objDAL = new DAL();
+            string sql = "update cliente set " +
+                          $"nome = '{Nome}',"+
+                          $"data_cadastro = '{DateTime.Parse(Data_Cadastro).ToString("yyyy/MM/dd")}',"+
+                          $"cpf_cnpj = '{Cpf_Cnpj}',"+
+                          $"data_nascimento = '{DateTime.Parse(Data_Nascimento).ToString("yyyy/MM/dd")}',"+
+                          $"tipo = '{Tipo}',"+
+                          $"telefone = '{Telefone}',"+
+                          $"email = '{Email}',"+
+                          $"cep = '{Cep}',"+
+                          $"logradouro = '{Logradouro}',"+
+                          $"numero = '{Numero}',"+
+                          $"bairro = '{Bairro}',"+
+                          $"complemento = '{Complemento}',"+
+                          $"cidade = '{Cidade}'," +
+                          $"uf = '{Uf}'" +
+                          $"where id = {Id}";
+            objDAL.ExecutarComandoSql(sql);
+        }
+
+       public void ExcluirCliente(int id)
+        {
+            DAL objDAL = new DAL();
+            string sql = $"delete from cliente where id = {id}";
+            objDAL.ExecutarComandoSql(sql);
+        }
+
     }
 }

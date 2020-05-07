@@ -61,15 +61,32 @@ namespace api_web_asp_net_core.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        [Route("putcliente/{id}")]
-        public void PutCliente(int id, [FromBody] string value)
+        [Route("editarcliente/{id}")]
+        public ReturnServices Editar(int id, [FromBody] ClienteModel dados)
         {
+            ReturnServices retorno = new ReturnServices();
+
+            try
+            {
+                dados.Id = id;
+                dados.EditarCliente();
+                retorno.Result = true;
+                retorno.ErrorMessage = string.Empty;
+            }
+            catch (Exception e)
+            {
+                retorno.Result = true;
+                retorno.ErrorMessage = "Error ao tentar registrar cliente" + e.Message;
+            }
+            return retorno;
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        [Route("excluircliente/{id}")]
+        public void ExcluirCliente(int id)
         {
+            new ClienteModel().ExcluirCliente(id);
         }
     }
 }
