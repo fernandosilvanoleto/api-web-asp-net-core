@@ -1,0 +1,20 @@
+﻿@model ClienteModel
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Código</td>
+            <td>Nome</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.ListaClientes)
+        {
+        <tr>
+            <td>@item.Id.ToString()</td>
+            <td>@item.Nome.ToString()</td>
+            <td>@item.Email.ToString()</td>
+        </tr>                
+        }        
+        </tbody>
+    </table>

@@ -15,12 +15,13 @@ namespace api_web_asp_net_core.Controllers
     public class ClienteController : ControllerBase
     {        
         Autenticacao AutenticaoService;
-        public ClienteController(IHttpContextAccessor _contextAccessor)
+        /*public ClienteController(IHttpContextAccessor _contextAccessor)
         {
             AutenticaoService = new Autenticacao(_contextAccessor);
-        }
+        }*/
         // GET api/webservice
         [HttpGet]
+        [Route("listagem")]
         public List<ClienteModel> Get()
         {
             return new ClienteModel().Listagem();
@@ -97,7 +98,7 @@ namespace api_web_asp_net_core.Controllers
             {
                 retorno.Result = true;
                 retorno.ErrorMessage = "Cliente excluído com sucesso!!!";
-                AutenticaoService.Autenticar();
+                //AutenticaoService.Autenticar();
                 new ClienteModel().ExcluirCliente(id);
 
             }
