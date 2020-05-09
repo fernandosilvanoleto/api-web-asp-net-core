@@ -17,6 +17,14 @@ namespace AppCliente.Controllers
             return View();
         }
 
+        [HttpPost]
+        [HttpGet]
+        public IActionResult Registrar(ClienteModel dados)
+        {
+            dados.Inserir();
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
