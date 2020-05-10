@@ -32,7 +32,7 @@ namespace AppCliente.Controllers
         public IActionResult Registrar(ClienteModel dados)
         {
             dados.Inserir();
-            return View();
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult About()

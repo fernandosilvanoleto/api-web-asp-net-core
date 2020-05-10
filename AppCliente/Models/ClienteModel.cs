@@ -43,9 +43,17 @@ namespace AppCliente.Models
         }
 
         public void Inserir()
-        {
+        {            
             string jsonData = JsonConvert.SerializeObject(this);
-            string json = WebApi.RequestPost("cadastrarcliente", jsonData);
+            string json = string.Empty;
+            if (Id == 0)
+            {
+                WebApi.RequestPost("cadastrarcliente", jsonData);
+            }
+            else
+            {
+                 
+            }
         }
     }
 }
