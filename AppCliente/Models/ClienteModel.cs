@@ -34,6 +34,14 @@ namespace AppCliente.Models
             return retorno;
         }
 
+        public ClienteModel Carregar(int? id)
+        {
+            ClienteModel retorno = new ClienteModel();
+            string json = WebApi.RequestGET("cliente", id.ToString());
+            retorno = JsonConvert.DeserializeObject<ClienteModel>(json);
+            return retorno;
+        }
+
         public void Inserir()
         {
             string jsonData = JsonConvert.SerializeObject(this);

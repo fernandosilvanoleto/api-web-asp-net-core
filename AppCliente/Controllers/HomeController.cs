@@ -17,8 +17,18 @@ namespace AppCliente.Controllers
             return View();
         }
 
-        [HttpPost]
         [HttpGet]
+        public IActionResult Registrar(int? id)
+        {
+            if (id != null)
+            {
+                ViewBag.Registro = new ClienteModel().Carregar(id);
+            }
+            return View();
+
+        }
+
+        [HttpPost]
         public IActionResult Registrar(ClienteModel dados)
         {
             dados.Inserir();
