@@ -52,7 +52,7 @@ namespace AppCliente.Models
             }
             else
             {
-                 
+                WebApi.RequestPut("editarcliente/" + Id, jsonData);
             }
         }
     }

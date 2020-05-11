@@ -39,5 +39,25 @@ namespace AppCliente.Util
             return responseString;
 
         }
+
+        public static string RequestPut(string metodo, string jsonData)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(URL + metodo);
+            //var jsonData = "'variavel1':'valor'";
+            var data = Encoding.ASCII.GetBytes(jsonData);
+            request.Method = "PUT";
+            request.ContentType = "application/json";
+            request.ContentLength = data.Length;
+
+            using (var strem = request.GetRequestStream())
+            {
+                strem.Write(data, 0, data.Length);
+            }
+            var response = (HttpWebResponse)request.GetResponse();
+            var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+
+            return responseString;
+
+        }
     }
 }
