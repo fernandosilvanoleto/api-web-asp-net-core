@@ -55,5 +55,11 @@ namespace AppCliente.Models
                 WebApi.RequestPut("editarcliente/" + Id, jsonData);
             }
         }
+
+        public void Excluir(int id)
+        {            
+            ClienteModel retorno = new ClienteModel();
+            string json = WebApi.RequestDELETE("excluircliente", id.ToString());
+        }
     }
 }

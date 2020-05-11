@@ -31,3 +31,5 @@ G:\Programação_Udemy\C#\api-web-asp-net-core\AppCliente\obj\Debug\netcoreapp2.
 G:\Programação_Udemy\C#\api-web-asp-net-core\AppCliente\obj\Debug\netcoreapp2.1\AppCliente.pdb
 G:\Programação_Udemy\C#\api-web-asp-net-core\AppCliente\obj\Debug\netcoreapp2.1\AppCliente.csproj.CopyComplete
 G:\Programação_Udemy\C#\api-web-asp-net-core\AppCliente\obj\Debug\netcoreapp2.1\Razor\Views\Home\Registrar.g.cshtml.cs
+G:\Programação_Udemy\C#\api-web-asp-net-core\AppCliente\obj\Debug\netcoreapp2.1\Razor\Views\Home\Excluir.g.cshtml.cs
+G:\Programação_Udemy\C#\api-web-asp-net-core\AppCliente\obj\Debug\netcoreapp2.1\Razor\Views\Home\ExcluirCliente.g.cshtml.cs

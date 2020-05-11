@@ -35,6 +35,20 @@ namespace AppCliente.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
+        public IActionResult Excluir(int id)
+        {
+            ViewData["Cliente_Id"] = id.ToString();
+            return View();
+        }
+
+       
+        public IActionResult ExcluirCliente(int id)
+        {
+            new ClienteModel().Excluir(id);
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

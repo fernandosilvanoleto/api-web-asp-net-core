@@ -3,6 +3,7 @@
     <thead>
         <tr>
             <td>#</td>
+            <td>#</td>
             <td>Código</td>
             <td>Nome</td>
             <td>Email</td>
@@ -13,6 +14,7 @@
         {
         <tr>
             <td><button class="btn btn-default" onclick="registrar(@item.Id.ToString())">Editar</button></td>
+            <td><button class="btn btn-danger" onclick="excluir(@item.Id.ToString())">Excluir</button></td>
             <td>@item.Id.ToString()</td>
             <td>@item.Nome.ToString()</td>
             <td>@item.Email.ToString()</td>
@@ -29,5 +31,8 @@
             id = "";
         }
         window.location.href = window.location.origin = "/Home/Registrar/" + id;
-    }
+        }
+    function excluir(id) {
+        window.location.href = window.location.origin = "/Home/Excluir/" + id;
+        }
 </script>

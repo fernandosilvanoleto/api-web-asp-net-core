@@ -59,5 +59,16 @@ namespace AppCliente.Util
             return responseString;
 
         }
+
+        public static string RequestDELETE(string metodo, string parametro)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(URL + metodo + "/" + parametro);
+            request.Method = "DELETE";
+            var response = (HttpWebResponse)request.GetResponse();
+            var responseString = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+
+            return responseString;
+
+        }
     }
 }
